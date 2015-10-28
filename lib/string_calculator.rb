@@ -10,11 +10,13 @@ class StringCalculator
 	private
 
 	def sum(nums)
-		nums.length > 1 ? nums[0].to_i + nums[1].to_i : nums[0].to_i
+		total = 0
+		nums.each {|num| total += num.to_i} 
+		total
 	end
 
 	def replace(string)
-		ignore_large(string.delete('^0-9-,').split(",").reject(&:empty?))
+		ignore_large(string.gsub(/[^0-9-]/i,',').split(",").reject(&:empty?))
 	end
 
 	def negative_return nums
@@ -39,11 +41,7 @@ class StringCalculator
 end
 
 
-#  s = StringCalculator.new
 
-# p s.add(",,,,l;3,4,5")
-# p s.add("58,2")
-# p s.add("-5,2")
 
 
 
