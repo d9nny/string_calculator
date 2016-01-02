@@ -1,6 +1,20 @@
-# string_calculator
-
 String Calculator
+=================
+Installation
+-------------
+To clone the repo onto your machine:
+
+$ git clone https://github.com/d9nny/string_calculator
+Navigate to the root folder, install Gems with:
+```sh
+$ bundle
+```
+To run tests:
+```sh
+$ rspec
+```
+String Calculator Rules
+-----------------------
 
 1. Create a simple String calculator with a method int Add(string numbers)
 2. The method can take 0, 1 or 2 numbers, and will return their sum (for an empty string it will return 0) for example “” or “1” or “1,2”
